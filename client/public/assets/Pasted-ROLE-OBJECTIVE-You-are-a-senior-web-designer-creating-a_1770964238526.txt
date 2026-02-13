@@ -1,0 +1,119 @@
+ROLE & OBJECTIVE
+You are a senior web designer creating a premium, minimal, architecture studio website for SAB Architects.
+The website must feel:
+* Earthy
+* Sustainable
+* Modern
+* Calm but confident
+* Highly intentional
+This site begins as a “Coming Soon” landing page and automatically evolves into a full portfolio website when projects are added — without redesign or manual toggles.
+
+1. BRAND IDENTITY
+* Studio Name: SAB Architects
+* Primary Font: Poppins (Google Fonts)
+* Background: Pure white
+* Tone: Confident, quiet, architectural
+* Aesthetic: Minimal, material-driven, not flashy
+
+2. HERO SECTION (ABOVE THE FOLD)
+Content order (center aligned):
+1. Logo
+    * Image file: logo.png
+    * Square logo
+    * Modest size (not dominant)
+    * Positioned slightly above center
+2. Smart Logo Fallback
+    * If logo.png is missing:
+        * Black circular background
+        * White “SAB” text
+        * Must look intentional, never broken
+3. Studio Name
+    * “SAB Architects”
+4. Rolling Tagline (Animated Text) Rotate through the following phrases one at a time:
+    * Architecture
+    * Interiors
+    * Research
+    * Design Advisory
+    * Material Studies
+    * Visualisation
+5. Animation style:
+    * Slow, smooth
+    * Fade or slide
+    * Calm pacing
+    * Infinite loop
+6. One-line message (use exactly this): “We are building our digital space. Stay connected.” 
+
+3. COMING SOON LOGIC (CRITICAL)
+* If NO projects exist:
+    * Show hero + rolling tagline + message
+    * Hide projects section
+* If AT LEAST ONE project exists:
+    * Automatically remove the “Coming Soon” message
+    * Automatically reveal the Projects section
+No manual toggles.
+
+4. PROJECTS SECTION
+Layout rules:
+* Desktop / Laptop: 2 projects per row
+* Mobile: 1 project per row
+Project cards:
+* Must allow 10 project cards minimum, project images will be uploaded later.
+* Image carousel (not single image)
+* Supports unlimited images
+* Supports PNG, JPG, WEBP, GIF
+* Swipe on mobile
+* Subtle controls on desktop
+* Calm gallery presentation
+Visibility rule:
+* Projects with no images must not appear
+
+5. CONTACT SECTION (BOTTOM OF PAGE)
+Placement:
+* Located above the footer
+* Always visible after scrolling
+Icon style (IMPORTANT):
+* Icons are PNG files
+* Icons are white
+* Icons sit inside black circular buttons
+* Solid icons only (no outlines)
+* Subtle hover lift or shadow
+Required icons are attached:
+* Phone (Phone.png)
+* WhatsApp (WhatsApp.png)
+* Email (Email.png)
+* Instagram (Instagram.png)
+* Location (Location.png)
+Contact details (hard-coded):
+* Phone / WhatsApp: +91 99529 37308
+* Email: SAB@sabarchitects.in
+* Instagram: https://www.instagram.com/sabarchitects.in/
+* Location (Google Maps): https://maps.app.goo.gl/8kc6sxwHQkKSsGMr6
+Clicking the location icon opens Google Maps in a new tab or native app.
+
+6. FOOTER
+* ©  SAB Architects. All rights reserved.
+
+7. UX PRINCIPLES
+* Scrolling allowed
+* No splash screens
+* No forced animations
+* Soft transitions only
+* Fast loading
+* Calm, architectural rhythm
+
+8. FUTURE-PROOFING
+Design must allow:
+* Full portfolio expansion
+* Project detail pages later
+* Research / writing sections later
+* Growth without redesign
+
+9. INSPIRATION (REFERENCE ONLY)
+* https://www.thevizlabs.com  Use for layout, not tone.
+* And Apple.com Use for tone, not layout. 
+
+🎯 FINAL GOAL
+Create a quietly confident architectural website that:
+* Looks complete on Day 1
+* Evolves naturally with work
+* Reflects SAB Architects’ intellectual and design maturity
