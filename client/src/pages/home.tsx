@@ -30,19 +30,52 @@ const ROLLING_TAGLINES = [
 ];
 
 // MOCK PROJECTS
-// Rule: Projects with no images must not appear.
-// Empty array = Coming Soon mode. Populated array = Portfolio mode.
-const RAW_PROJECTS = Array.from({ length: 10 }).map((_, i) => ({
-  id: i + 1,
-  title: `Project ${i + 1}`,
-  location: "Location, India",
-  year: "2024",
-  images: [
-    "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2700&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2700&auto=format&fit=crop",
-  ]
-}));
+const RAW_PROJECTS = [
+  {
+    id: 1,
+    title: "Minimalist Lakeside Villa",
+    location: "Udaipur, Rajasthan",
+    year: "2023",
+    images: [
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 2,
+    title: "Contemporary Urban Loft",
+    location: "Mumbai, Maharashtra",
+    year: "2024",
+    images: [
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 3,
+    title: "Sustainable Forest Retreat",
+    location: "Coorg, Karnataka",
+    year: "2022",
+    images: [
+      "https://images.unsplash.com/photo-1449156001437-3a1621dfbe2b?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1965&auto=format&fit=crop"
+    ]
+  },
+  {
+    id: 4,
+    title: "Concrete Geometric Pavilion",
+    location: "Ahmedabad, Gujarat",
+    year: "2023",
+    images: [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=2074&auto=format&fit=crop"
+    ]
+  }
+];
 
 // Filter projects that have at least one image
 const PROJECTS = RAW_PROJECTS.filter(p => p.images && p.images.length > 0);
