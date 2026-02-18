@@ -180,7 +180,10 @@ export default function Home() {
 
       {/* --- CONTACT SECTION --- */}
       <section className="w-full py-20 flex flex-col items-center justify-center gap-10 mt-auto">
-        <div className="w-full h-px bg-neutral-100 max-w-xs mb-8" />
+        <div className="flex flex-col items-center gap-4 mb-4">
+          <div className="w-12 h-px bg-neutral-200" />
+          <h2 className="text-sm font-medium tracking-[0.2em] uppercase text-neutral-400">Connect with us</h2>
+        </div>
         
         <div className="flex flex-wrap justify-center gap-6 md:gap-10">
           <ContactButton 
