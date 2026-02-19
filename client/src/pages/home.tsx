@@ -175,7 +175,7 @@ export default function Home() {
               >
                 {/* Project Image Carousel */}
                 <div className="w-full aspect-[4/3] bg-neutral-50 overflow-hidden relative rounded-sm">
-                  <Carousel className="w-full h-full group/carousel">
+                  <Carousel className="w-full h-full group/carousel relative">
                     <CarouselContent className="h-full ml-0">
                       {project.images.map((img, imgIdx) => (
                         <CarouselItem key={imgIdx} className="h-full w-full pl-0">
@@ -188,10 +188,39 @@ export default function Home() {
                       ))}
                     </CarouselContent>
                     
-                    {/* Carousel Controls - Only visible on hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-between px-4">
-                      <CarouselPrevious className="pointer-events-auto h-8 w-8 md:h-10 md:w-10 rounded-full border-none bg-white/90 hover:bg-white text-black shadow-sm translate-x-0" />
-                      <CarouselNext className="pointer-events-auto h-8 w-8 md:h-10 md:w-10 rounded-full border-none bg-white/90 hover:bg-white text-black shadow-sm translate-x-0" />
+                    {/* Carousel Controls - Desktop Only Hover */}
+                    <div className="hidden md:flex absolute inset-0 opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 pointer-events-none items-center justify-between px-4 z-[100]">
+                      <button 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          const carousel = e.currentTarget.closest('.group\\/carousel');
+                          const prevBtn = carousel?.querySelector('button[aria-label="Previous slide"]');
+                          if (prevBtn) (prevBtn as HTMLButtonElement).click();
+                        }}
+                        className="h-10 w-10 rounded-full border border-neutral-200 bg-white/95 hover:bg-white text-black shadow-lg pointer-events-auto flex items-center justify-center cursor-pointer z-[110] relative translate-x-0 group/btn"
+                        type="button"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="pointer-events-none block w-6 h-6"><path d="m15 18-6-6 6-6"/></svg>
+                      </button>
+                      <button 
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          const carousel = e.currentTarget.closest('.group\\/carousel');
+                          const nextBtn = carousel?.querySelector('button[aria-label="Next slide"]');
+                          if (nextBtn) (nextBtn as HTMLButtonElement).click();
+                        }}
+                        className="h-10 w-10 rounded-full border border-neutral-200 bg-white/95 hover:bg-white text-black shadow-lg pointer-events-auto flex items-center justify-center cursor-pointer z-[110] relative translate-x-0 group/btn"
+                        type="button"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="pointer-events-none block w-6 h-6"><path d="m9 18 6-6-6-6"/></svg>
+                      </button>
+                      {/* Original controls hidden but present to manage state */}
+                      <div className="hidden pointer-events-none" aria-hidden="true">
+                        <CarouselPrevious aria-label="Previous slide" />
+                        <CarouselNext aria-label="Next slide" />
+                      </div>
                     </div>
                   </Carousel>
                 </div>
