@@ -35,23 +35,8 @@ const ROLLING_TAGLINES = [
  * Logic: If all project image arrays are empty, the site shows "Coming Soon".
  */
 const RAW_PROJECTS = [
-  {
-    id: 1,
-    title: "Minimalist Lakeside Villa",
-    location: "Udaipur, Rajasthan",
-    year: "2023",
-    images: [
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2070&auto=format&fit=crop",
-    ]
-  },
-  {
-    id: 2,
-    title: "Contemporary Urban Loft",
-    location: "Mumbai, Maharashtra",
-    year: "2024",
-    images: [] // Empty array triggers "Coming Soon" if all are empty
-  },
+  { id: 1, title: "Project 1", location: "Location", year: "2024", images: [] },
+  { id: 2, title: "Project 2", location: "Location", year: "2024", images: [] },
   { id: 3, title: "Project 3", location: "Location", year: "2024", images: [] },
   { id: 4, title: "Project 4", location: "Location", year: "2024", images: [] },
   { id: 5, title: "Project 5", location: "Location", year: "2024", images: [] },
