@@ -112,8 +112,12 @@ export default function Home() {
         </div>
 
         {!hasProjects && (
-          <p className="text-neutral-900 text-sm font-bold tracking-wide mt-2 fade-in fade-in-delay-3 text-center max-w-xs">
-            We are building our digital space. Stay connected.
+          <p 
+            className="text-sm font-bold tracking-wide mt-2 fade-in fade-in-delay-3 text-center max-w-xs"
+            style={{ color: '#808080' }}
+          >
+            We are building our digital space.<br />
+            Stay connected.
           </p>
         )}
       </section>
@@ -198,7 +202,7 @@ export default function Home() {
       <section className="w-full py-12 flex flex-col items-center justify-center gap-8 mt-auto">
         <div className="flex flex-col items-center gap-3 mb-2">
           <div className="w-12 h-px bg-neutral-200" />
-          <h2 className="text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-500">Connect with us</h2>
+          <h2 className="text-[12px] font-bold tracking-[0.2em] uppercase text-neutral-500">Connect with us</h2>
         </div>
         
         <div className="flex flex-wrap justify-center gap-5 md:gap-10 px-4">
