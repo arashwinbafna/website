@@ -68,10 +68,10 @@ export default function Home() {
       <section 
         className={`
           flex-1 flex flex-col items-center justify-center w-full px-6 transition-all duration-1000 ease-in-out
-          ${hasProjects ? 'py-20 min-h-[50vh]' : 'py-0 min-h-[85vh]'}
+          ${hasProjects ? 'py-12 min-h-[40vh]' : 'py-12 min-h-[60vh]'}
         `}
       >
-        <div className="mb-6 md:mb-8 relative w-20 h-20 md:w-28 md:h-28 fade-in">
+        <div className="mb-4 md:mb-6 relative w-16 h-16 md:w-24 md:h-24 fade-in">
           <img 
             src={ASSETS.logo} 
             alt="SAB Architects Logo" 
@@ -90,11 +90,11 @@ export default function Home() {
           />
         </div>
 
-        <h1 className="text-xl md:text-2xl font-medium tracking-wide mb-3 md:mb-4 fade-in fade-in-delay-1 text-center">
+        <h1 className="text-xl md:text-2xl font-semibold tracking-wide mb-2 md:mb-3 fade-in fade-in-delay-1 text-center">
           SAB Architects
         </h1>
 
-        <div className="h-6 md:h-8 mb-6 md:mb-8 flex items-center justify-center overflow-hidden fade-in fade-in-delay-2 w-full">
+        <div className="h-6 md:h-8 mb-4 md:mb-6 flex items-center justify-center overflow-hidden fade-in fade-in-delay-2 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={taglineIndex}
@@ -104,7 +104,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeInOut" }}
               className="text-center w-full"
             >
-              <p className="text-neutral-500 text-xs md:text-sm font-light tracking-[0.2em] uppercase">
+              <p className="text-neutral-600 text-xs md:text-sm font-medium tracking-[0.2em] uppercase">
                 {ROLLING_TAGLINES[taglineIndex]}
               </p>
             </motion.div>
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
 
         {!hasProjects && (
-          <p className="text-neutral-400 text-xs font-light tracking-wide mt-4 fade-in fade-in-delay-3 text-center">
+          <p className="text-neutral-900 text-sm font-bold tracking-wide mt-2 fade-in fade-in-delay-3 text-center max-w-xs">
             We are building our digital space. Stay connected.
           </p>
         )}
@@ -195,13 +195,13 @@ export default function Home() {
       )}
 
       {/* --- CONTACT SECTION --- */}
-      <section className="w-full py-20 flex flex-col items-center justify-center gap-10 mt-auto">
-        <div className="flex flex-col items-center gap-4 mb-4">
+      <section className="w-full py-12 flex flex-col items-center justify-center gap-8 mt-auto">
+        <div className="flex flex-col items-center gap-3 mb-2">
           <div className="w-12 h-px bg-neutral-200" />
-          <h2 className="text-sm font-medium tracking-[0.2em] uppercase text-neutral-400">Connect with us</h2>
+          <h2 className="text-[10px] font-bold tracking-[0.2em] uppercase text-neutral-500">Connect with us</h2>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+        <div className="flex flex-wrap justify-center gap-5 md:gap-10 px-4">
           <ContactButton icon={ASSETS.phone} href="tel:+919952937308" label="Phone" />
           <ContactButton icon={ASSETS.whatsapp} href="https://wa.me/919952937308" label="WhatsApp" />
           <ContactButton icon={ASSETS.email} href="mailto:SAB@sabarchitects.in" label="Email" />
