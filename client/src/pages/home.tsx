@@ -210,7 +210,7 @@ export default function Home() {
           <ContactButton icon={ASSETS.whatsapp} href="https://wa.me/919952937308" label="WhatsApp" />
           <ContactButton icon={ASSETS.email} href="mailto:SAB@sabarchitects.in" label="Email" />
           <ContactButton icon={ASSETS.instagram} href="https://www.instagram.com/sabarchitects.in/" label="Instagram" />
-          <ContactButton icon={ASSETS.location} href="https://maps.app.goo.gl/8kc6sxwHQkKSsGMr6" label="Location" />
+          <ContactButton icon={ASSETS.location} href="https://maps.app.goo.gl/ApLdzf7h4hXs155g6" label="Location" />
         </div>
       </section>
 
